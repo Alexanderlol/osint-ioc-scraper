@@ -18,6 +18,7 @@ Navigate to the directory that contains the file and run python3 osint-ioc-websc
 ### Dependencies
 
 pip install bs4
+<br>
 pip install tabulate
 
 
