@@ -11,7 +11,7 @@ Navigate to the directory that contains the file and run python3 osint-ioc-websc
 ### Prerequisites
 
 [Python](https://www.python.org/downloads/)
-( <br> )
+<br>
 [pip](https://pypi.org/project/pip/)
 
 
