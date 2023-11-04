@@ -26,7 +26,7 @@ def scrape_website(url):
 
         # Define regex patterns for IP addresses, domains, MD5, SHA-1, and SHA-256.
         ip_regex = r'\b(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/\d{1,2})?)\b'
-        domain_regex = r'\b(((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(?:-[a-z0-9]+)*\.)+[a-z]{2,63})\b|(?!pdf|docx?|xlsx?|txt|jpg|jpeg|png|exe|dll|js|vbs|bat|ps1|zip|rar|7z|tar|gz|bin|dat|csv|json|html|css|xml|php|asp|py|rb|java|cpp|h|c|swift|go|lua|js|ts|jsx|tsx|sql|db|ini|cfg|conf|yaml|yml|sh|log|csv|tsv|sql|db|bak|backup)[a-z0-9]+\b'
+        domain_regex = r'\b(((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(?:-[a-z0-9]+)*\.)+[a-z]{2,63})\b' #|(?!pdf|docx?|xlsx?|txt|jpg|jpeg|png|exe|dll|js|vbs|bat|ps1|zip|rar|7z|tar|gz|bin|dat|csv|json|html|css|xml|php|asp|py|rb|java|cpp|h|c|swift|go|lua|js|ts|jsx|tsx|sql|db|ini|cfg|conf|yaml|yml|sh|log|csv|tsv|sql|db|bak|backup)[a-z0-9]+\b'
         md5_regex = r'\b[a-f0-9]{32}\b'
         sha1_regex = r'\b[a-f0-9]{40}\b'
         sha256_regex = r'\b[a-f0-9]{64}\b'
@@ -48,7 +48,7 @@ def scrape_website(url):
 
         print('\n Website: ' + url)
         #Create key value pairs for table
-        table = {'IP Addresses': ip_addresses, 'Domains': domains, 'MD5': md5_hashes, 'SHA1': sha1_hashes, 'SHA256': sha256_hashes}
+        table = {'IP Addresses': ip_addresses, 'Domains/Files': domains, 'SHA1': sha1_hashes, 'SHA256': sha256_hashes}
         # Print the table
         print(tabulate(table, headers='keys',tablefmt='fancy_grid'))
         print("\n")
