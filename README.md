@@ -24,4 +24,4 @@ pip install tabulate
 
 ### Demo
 
-![Demo Image](demo2.PNG)
+![Demo Image](images/demo2.PNG)
